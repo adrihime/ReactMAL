@@ -21,9 +21,12 @@
 .App-link {
 
 }
-.body-home{
-  margin-top: 4rem;
+.body-main{
+  margin-top: 4.5rem;
   height: 100%;
+}
+.navbar{
+  box-shadow: 2px 2px 5px 0px #00000040;
 }
 @keyframes App-logo-spin {
   from {
