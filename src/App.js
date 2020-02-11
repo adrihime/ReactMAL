@@ -1,6 +1,7 @@
 import React from 'react';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/scss/bootstrap.scss';
+
+import './App.scss';
 import Routes from './routes';
 
 function App() {
