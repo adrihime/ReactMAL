@@ -1,5 +1,6 @@
 import React from 'react';
 import {Card, Button} from 'react-bootstrap';
+import {Card, Button, CardColumns} from 'react-bootstrap';
 
 export default class Home extends React.Component{
 
@@ -8,6 +9,7 @@ export default class Home extends React.Component{
         <div class="col-12 card-deck">
           <Card style={{ width: '18rem', marginRight: '1rem' }}>
       <div className="container-fluid body-main">
+        <CardColumns>
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
               <Card.Text>
@@ -38,6 +40,7 @@ export default class Home extends React.Component{
             </Card.Body>
           </Card>
         </div>);
+        </CardColumns>
       </div>);
   }
 }
