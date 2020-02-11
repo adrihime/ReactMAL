@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../logo.svg';
-import {Navbar, Nav, Form, Button, FormControl, Image} from 'react-bootstrap';
+import {Navbar, Nav, Form, Button, FormControl} from 'react-bootstrap';
 
 export default class Header extends React.Component{
   render(){
