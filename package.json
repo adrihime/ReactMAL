@@ -9,9 +9,11 @@
     "bootstrap": "^4.4.1",
     "jikan-node": "https://github.com/adriel83/jikan-node",
     "node-sass": "^4.13.1",
+    "numeral": "^2.0.6",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
+    "react-dynamic-font": "^2.0.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.1"
   },
