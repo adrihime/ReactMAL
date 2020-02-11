@@ -14,7 +14,7 @@
   }
 }
 .body-main{
-  margin-top: 5rem;
+  margin-top: 5.5rem;
   height: 100%;
 }
 .navbar{
@@ -24,19 +24,38 @@
   text-align: left;
 }
 .card-columns .anime {
-  margin-bottom: 1rem;
+  z-index: 1;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
   text-align: center;
   height: 16rem;
+  box-shadow: 4px 3px 3px 0px rgba(0, 0, 0, 0.29);
+  transition: 0.5s;
+}
+.anime:hover{
+  transition: 0.3s;
+  box-shadow: 8px 5px 2px 0px rgba(0, 0, 0, 0.29);
+  transform: translateY(-0.45rem);
+  .imagem-anime{
+    transition: 0.5s;
+    filter: brightness(0.2);
+  }
 }
 .anime .card-body{
   color: white;
 }
 .imagem-anime{
-  filter: brightness(0.7) blur(0.25rem);
+  z-index: 0;
+  transition: 0.5s;
+  filter: brightness(0.2) blur(0.25rem);
 }
 .container-imagem{
   height: 100%;
   overflow: hidden;
+}
+.card-header{
+  font-size: 1.5rem;
+  background-color: white;
 }
 @media (min-width: 576px){
   .card-columns {
