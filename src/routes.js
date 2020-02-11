@@ -10,10 +10,8 @@ const Routes = () =>{
       <BrowserRouter>
         <Header/>
         <Switch>
-          <div className="container-fluid body-main">
-            <Route exact path = "/" component={Home}/>
-            <Route exact path = "/manga" component={Manga}/>
-          </div>
+          <Route exact path = "/" component={Home}/>
+          <Route exact path = "/manga" component={Manga}/>
         </Switch>
       </BrowserRouter>
   );

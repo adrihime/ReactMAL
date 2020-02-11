@@ -3,6 +3,9 @@ import React from 'react';
 export default class Manga extends React.Component{
 
   render(){
-    return ('a');
+    return (
+      <div className="container-fluid body-main">
+        a
+      </div>);
   }
 }

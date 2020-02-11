@@ -7,6 +7,7 @@ export default class Home extends React.Component{
     return(
         <div class="col-12 card-deck">
           <Card style={{ width: '18rem', marginRight: '1rem' }}>
+      <div className="container-fluid body-main">
             <Card.Body>
               <Card.Title>Card Title</Card.Title>
               <Card.Text>
@@ -37,5 +38,6 @@ export default class Home extends React.Component{
             </Card.Body>
           </Card>
         </div>);
+      </div>);
   }
 }
