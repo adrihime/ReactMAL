@@ -13,14 +13,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-.App-header {
-
-}
-
-.App-link {
-
-}
 .body-main{
   margin-top: 5rem;
   height: 100%;
@@ -36,9 +28,19 @@
   text-align: center;
   height: 16rem;
 }
+.anime .card-body{
+  color: white;
+}
+.imagem-anime{
+  filter: brightness(0.7) blur(0.25rem);
+}
+.container-imagem{
+  height: 100%;
+  overflow: hidden;
+}
 @media (min-width: 576px){
   .card-columns {
-    column-count: 6;
+    column-count: 5;
   }
 }
 
