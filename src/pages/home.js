@@ -26,8 +26,7 @@ export default class Home extends React.Component{
     return(
       <div className="container-fluid body-main">
         <CardColumns>
-      {this.state.top.map((anime, i)=>
-
+          {this.state.top.map((anime, i)=>
             <Card className="anime" title={anime.title} key={i}>
               <div className="container-imagem">
                 <Card.Img src={anime.image_url} alt="Card image" className="imagem-anime"/>
@@ -46,8 +45,8 @@ export default class Home extends React.Component{
                 </Card.Body>
               </Card.ImgOverlay>
             </Card>
-      )}
-      </CardColumns>
+          )}
+        </CardColumns>
       </div>
     );
   }
