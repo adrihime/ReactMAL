@@ -1,20 +1,44 @@
 .App{
   display: flex;
   flex-direction: column;
+  font-family: 'Quicksand', sans-serif;
+  overflow: hidden;
+}
+.root, body, html {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+  scroll-behavior: smooth;
 }
 
 .App-header{
   display: inherit;
   height: 5vh;
   background-color: lightgray;
-
+  width: 100%;
+}
+.search-main::-webkit-scrollbar {
+  width: 0.7rem;
 }
 
-.body-main{
+.search-main::-webkit-scrollbar-track {
+  background: white;        /* color of the tracking area */
+}
+
+.search-main::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 20px;
+  border-right: 0.2rem white solid;
+}
+
+.search-main{
   height: 95vh;
   display: inherit;
   flex-wrap: wrap;
   padding-top: 1rem;
+  overflow-y: scroll;
 }
 
 @keyframes slideBottom {
@@ -30,18 +54,22 @@
 }
 
 .anime{
-  animation: 1s ease-out 0s 1 slideBottom;
-  height: 17rem;
-  width: 10rem;
-  margin-left: 5rem;
+  display: inherit;
+  flex-direction: column;
+  animation-fill-mode: both;
+  animation-name: slideBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  height: 19rem;
+  width: 11.9rem;
+  margin-left: 4.5rem;
   margin-bottom: 3rem;
   border-radius: 0.25rem;
   cursor: pointer;
 }
 
-.anime:nth-child(n+1) { 
-  animation-delay: calc(n*0.2s);
-  cursor: progress;
+.anime:nth-child(n+1) {
+  //cursor: progress;
 }
 
 .anime-body{
@@ -50,35 +78,38 @@
   background-position: center;
   border-radius: 0.25rem;
   display: flex;
-  flex-direction: row;
-  color: white;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .anime-title{
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 800;
   color: gray;
+  height: 10%;
 }
 
 .anime-score{
-  color: black;
-  font-size: 0.8rem;
-  margin-top: auto;
-  text-align: left;
+  display: inherit;
+  color: white;
+  font-size: 1rem;
   padding-left: 0.25rem;
-  background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(1px);
-  width: 50%;
+  height: 100%;
 }
 
 .anime-members{
-  color: black;
-  font-size: 0.8rem;
-  margin-top: auto;
+  display: inherit;
+  color: white;
+  font-size: 1rem;
   text-align: right;
   padding-right: 0.25rem;
-  background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(1px);
-  width: 50%;
+  height: 100%;
+}
+
+.anime-footer{
+  height: 10%;
+  margin-top: auto;
+  display: inherit;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(2px) brightness(0.4);
+  justify-content: space-between;
 }

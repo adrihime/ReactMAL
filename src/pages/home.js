@@ -3,8 +3,10 @@ import DynamicFont from 'react-dynamic-font';
 import Numeral from 'numeral';
 import logo from '../logo.svg';
 import Jikan from 'jikan-node'
+import StarBorderRoundedIcon from '@material-ui/icons/StarBorderRounded';
+import PeopleAltRoundedIcon from '@material-ui/icons/PeopleAltRounded';
 
-export default class  Home extends React.Component{
+export default class  Search extends React.Component{
   constructor(props){
     super(props);
     this.state = {top:null, loading: true};
@@ -23,19 +25,26 @@ export default class  Home extends React.Component{
   }
   renderAnime(){
     return(
-      <div className="body-main">
+      <div className="search-main">
           {this.state.top.map((anime, i)=>
-          <div className="anime" title={anime.title} key={i}>
-            <div className="anime-image"/>
-              <div className="anime-body" style={{backgroundImage:'url('+anime.image_url+')'}}>
+          <div className="anime" title={anime.title} key={i} style={{animationDelay:i*0.05+'s'}}>
+            <div className="anime-body" style={{backgroundImage:'url('+anime.image_url+')'}}>
+              <div className="anime-footer">
                 <div className="anime-score">
-                  {anime.score}
+                  <StarBorderRoundedIcon/>
+                  <div>
+                    {anime.score}
+                  </div>
                 </div>
                 <div className="anime-members">
-                  {Numeral(anime.members).format('0.00a')}
+                  <PeopleAltRoundedIcon/>
+                  <div>
+                    {Numeral(anime.members).format('0.00a')}
+                  </div>
                 </div>
               </div>
-              <div className="anime-title">{anime.title}</div>
+            </div>
+            <div className="anime-title">{anime.title}</div>
           </div>
           )}
       </div>
