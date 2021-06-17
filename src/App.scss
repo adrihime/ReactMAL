@@ -6,16 +6,79 @@
 .App-header{
   display: inherit;
   height: 5vh;
+  background-color: lightgray;
+
 }
 
 .body-main{
   height: 95vh;
   display: inherit;
   flex-wrap: wrap;
+  padding-top: 1rem;
+}
+
+@keyframes slideBottom {
+  0%{
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+   
 }
 
 .anime{
-  height: 30vh;
-  width: 18vh;
-  margin-left: 2rem;
+  animation: 1s ease-out 0s 1 slideBottom;
+  height: 17rem;
+  width: 10rem;
+  margin-left: 5rem;
+  margin-bottom: 3rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.anime:nth-child(n+1) { 
+  animation-delay: calc(n*0.2s);
+  cursor: progress;
+}
+
+.anime-body{
+  height: 90%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: space-between;
+}
+
+.anime-title{
+  font-size: 1rem;
+  font-weight: 500;
+  color: gray;
+}
+
+.anime-score{
+  color: black;
+  font-size: 0.8rem;
+  margin-top: auto;
+  text-align: left;
+  padding-left: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(1px);
+  width: 50%;
+}
+
+.anime-members{
+  color: black;
+  font-size: 0.8rem;
+  margin-top: auto;
+  text-align: right;
+  padding-right: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(1px);
+  width: 50%;
 }

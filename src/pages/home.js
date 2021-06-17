@@ -26,16 +26,16 @@ export default class  Home extends React.Component{
       <div className="body-main">
           {this.state.top.map((anime, i)=>
           <div className="anime" title={anime.title} key={i}>
-            <div className="anime-image" style={{backgroundImage:'url('+anime.image_url+')'}}/>
-              <DynamicFont content={anime.title}></DynamicFont>
-              <div className="anime-body d-flex h-75 justify-content-between py-0">
-                <div className="nime-score">
+            <div className="anime-image"/>
+              <div className="anime-body" style={{backgroundImage:'url('+anime.image_url+')'}}>
+                <div className="anime-score">
                   {anime.score}
                 </div>
                 <div className="anime-members">
                   {Numeral(anime.members).format('0.00a')}
                 </div>
               </div>
+              <div className="anime-title">{anime.title}</div>
           </div>
           )}
       </div>
