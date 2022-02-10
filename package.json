@@ -10,7 +10,7 @@
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.4.1",
     "jikan-node": "git+https://github.com/adriel83/jikan-node.git",
-    "node-sass": "^4.0.0",
+    "node-sass": "^7.0.0",
     "numeral": "^2.0.6",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
